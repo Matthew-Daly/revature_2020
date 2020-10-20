@@ -1,4 +1,4 @@
-	package Music1;
+package Music1;
 
 public class MusicianMain {
 

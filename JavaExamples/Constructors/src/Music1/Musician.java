@@ -46,6 +46,7 @@ public class Musician {
 	public void printMusician() {
 		System.out.println("name : "+name);
 		System.out.println("stage name : "+stageName);
+		System.out.println("instrument : " +instrument);
 		if(band!=null) {
 			System.out.println("Band Details");
 			System.out.println("Band : "+band.getBandName());
