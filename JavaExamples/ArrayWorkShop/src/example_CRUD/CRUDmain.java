@@ -6,16 +6,28 @@ public class CRUDmain {
 	
 	public static void main(String[] args) {
 		
+		int n = 9;
+		
+//		creating random value array
 		int[] randomArray = new int[10];
 
 
 		for(int i=0; i<randomArray.length; i++)
 			randomArray[i] = (int) (Math.random() * 1000);
 
-		System.out.print(Arrays.toString(randomArray));		
+		System.out.print("Printing array..." + Arrays.toString(randomArray));		
 		
-				
 		
+//		inserting 0 into randomArray[4]
+		int pos = 4;
+		int value = 0;
+		for (int i = n; i >= pos; i-- ) {
+			randomArray[i] = randomArray[i-1];
+		}
+		randomArray[pos - 1] = value;
+		n++;
+		
+		System.out.print(Arrays.toString(randomArray));	
 	}
 
 }
