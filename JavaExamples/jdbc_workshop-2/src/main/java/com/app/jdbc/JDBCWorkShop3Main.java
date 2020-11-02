@@ -2,7 +2,7 @@ package com.app.jdbc;
 
 import com.app.jdbc.dao.PlayerDAO;
 import com.app.jdbc.dao.impl.PlayerDAOimpl;
-import com.app.jdbc.excception.BuisnessException;
+import com.app.jdbc.exception.BusinessException;
 import com.app.jdbc.model.Player;
 
 public class JDBCWorkShop3Main {
@@ -19,7 +19,7 @@ public class JDBCWorkShop3Main {
 				System.out.println(player);
 				
 			}
-		} catch (BuisnessException e) {
+		} catch (BusinessException e) {
 			System.out.println(e.getMessage());
 		}
 			

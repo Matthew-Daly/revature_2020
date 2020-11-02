@@ -6,13 +6,13 @@ import java.sql.SQLException;
 
 import com.app.jdbc.dao.PlayerDAO;
 import com.app.jdbc.dbutil.PostresSqlConnection;
-import com.app.jdbc.excception.BuisnessException;
+import com.app.jdbc.exception.BusinessException;
 import com.app.jdbc.model.Player;
 
 public class PlayerDAOimpl implements PlayerDAO {
 
 	@Override
-	public int createPlayer(Player player) throws BuisnessException {
+	public int createPlayer(Player player) throws BusinessException {
 		int c = 0;
 		try(Connection connection=PostresSqlConnection.getConnection()){
 			String sql="INSERT INTO roc_revature.player(id, name, age, gender, teamname, contact) " +
@@ -30,7 +30,7 @@ public class PlayerDAOimpl implements PlayerDAO {
 			
 		} catch (ClassNotFoundException | SQLException e) {
 			System.out.println(e); //take out in production
-			throw new BuisnessException("Internal error. Please contact SYSAdmin");
+			throw new BusinessException("Internal error. Please contact SYSAdmin");
 		}
 		return c;
 	}
