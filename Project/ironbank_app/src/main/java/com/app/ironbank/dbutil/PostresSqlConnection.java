@@ -14,10 +14,10 @@ public class PostresSqlConnection {
 	
 	public static Connection getConnection() throws ClassNotFoundException, SQLException {
 		//load Driver	
-		Class.forName("org.postgresql.Driver");
+		Class.forName(DBUtilProps.DRIVER);
 
 		//open connection
-		String url = "jdbc:postgresql://localhost:5432/theironbank";
+		String url = DBUtilProps.URL;
 		String password = "Gain45dig";
 		String username = "postgres";
 		connection=DriverManager.getConnection(url, username, password);

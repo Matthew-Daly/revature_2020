@@ -16,7 +16,7 @@ public class EmployeeDaoImpl implements EmployeeDAO {
 	public int createEmployee(Employee employee)throws BusinessException{
 		int c=0;
 		try(Connection connection=PostresSqlConnection.getConnection()){
-			String sql="insert into theironbank.ironbank.employees(employee_id, firstname, lastname, username, password, email) values(?, ?, ?, ?, ?, ?)";
+			String sql=EmployeeQueries.INSERTEMPLOYEE;
 		    PreparedStatement preparedStatement=connection.prepareStatement(sql);
 		    preparedStatement.setInt(1, employee.getEmployee_id());
 		    preparedStatement.setString(2, employee.getFirstname());
@@ -67,7 +67,7 @@ public class EmployeeDaoImpl implements EmployeeDAO {
 	public Employee getEmployeeByID(int employee_id) throws BusinessException {
 		Employee employee = null;
 		try (Connection connection = PostresSqlConnection.getConnection()) {
-			String sql = "SELECT firstname, lastname, username, password, email FROM theironbank.ironbank.employees where employee_id=?";
+			String sql = EmployeeQueries.GETEMPLOYEEBYID;
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setInt(1, employee_id);
 			ResultSet resultSet = preparedStatement.executeQuery();
