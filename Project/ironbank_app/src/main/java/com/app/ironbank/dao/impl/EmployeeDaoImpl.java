@@ -5,12 +5,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.app.ironbank.dao.EmployeeDAO;
+import com.app.ironbank.dao.EmployeeDao;
 import com.app.ironbank.dbutil.PostresSqlConnection;
 import com.app.ironbank.exception.BusinessException;
 import com.app.ironbank.model.Employee;
 
-public class EmployeeDaoImpl implements EmployeeDAO {
+public class EmployeeDaoImpl implements EmployeeDao {
 
 	@Override
 	public int createEmployee(Employee employee)throws BusinessException{

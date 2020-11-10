@@ -1,0 +1,29 @@
+[INFO]        com.app.ironbank.service.LogMain       Hello from INFO             10-November-2020 Tuesday ICT 08:23:12                
+[WARN]        com.app.ironbank.service.LogMain       Hello from WARN             10-November-2020 Tuesday ICT 08:23:12                
+[ERROR]        com.app.ironbank.service.LogMain       Hello from ERROR             10-November-2020 Tuesday ICT 08:23:12                
+[FATAL]        com.app.ironbank.service.LogMain       Hello from FATAL             10-November-2020 Tuesday ICT 08:23:12                
+[TRACE]        com.app.ironbank.service.LogMain       Hello from TRACE             10-November-2020 Tuesday ICT 08:24:47                
+[DEBUG]        com.app.ironbank.service.LogMain       Hello from DEBUG             10-November-2020 Tuesday ICT 08:24:47                
+[INFO]        com.app.ironbank.service.LogMain       Hello from INFO             10-November-2020 Tuesday ICT 08:24:47                
+[WARN]        com.app.ironbank.service.LogMain       Hello from WARN             10-November-2020 Tuesday ICT 08:24:47                
+[ERROR]        com.app.ironbank.service.LogMain       Hello from ERROR             10-November-2020 Tuesday ICT 08:24:47                
+[FATAL]        com.app.ironbank.service.LogMain       Hello from FATAL             10-November-2020 Tuesday ICT 08:24:47                
+[INFO]        com.app.ironbank.service.LogMain       Hello from INFO             10-November-2020 Tuesday ICT 08:25:35                
+[WARN]        com.app.ironbank.service.LogMain       Hello from WARN             10-November-2020 Tuesday ICT 08:25:35                
+[ERROR]        com.app.ironbank.service.LogMain       Hello from ERROR             10-November-2020 Tuesday ICT 08:25:35                
+[FATAL]        com.app.ironbank.service.LogMain       Hello from FATAL             10-November-2020 Tuesday ICT 08:25:35                
+[INFO]        com.app.ironbank.service.LogMain       Hello from INFO             10-November-2020 Tuesday ICT 08:42:42                
+[WARN]        com.app.ironbank.service.LogMain       Hello from WARN             10-November-2020 Tuesday ICT 08:42:42                
+[ERROR]        com.app.ironbank.service.LogMain       Hello from ERROR             10-November-2020 Tuesday ICT 08:42:42                
+[FATAL]        com.app.ironbank.service.LogMain       Hello from FATAL             10-November-2020 Tuesday ICT 08:42:42                
+[INFO]        com.app.ironbank.service.Service       Hello from service with name = TEST             10-November-2020 Tuesday ICT 08:42:42                
+[INFO]        com.app.ironbank.service.LogMain       Hello from INFO             10-November-2020 Tuesday ICT 08:57:54                
+[WARN]        com.app.ironbank.service.LogMain       Hello from WARN             10-November-2020 Tuesday ICT 08:57:54                
+[ERROR]        com.app.ironbank.service.LogMain       Hello from ERROR             10-November-2020 Tuesday ICT 08:57:54                
+[FATAL]        com.app.ironbank.service.LogMain       Hello from FATAL             10-November-2020 Tuesday ICT 08:57:54                
+[INFO]        com.app.ironbank.service.Service       Hello from service with name = TEST             10-November-2020 Tuesday ICT 08:57:54                
+[INFO]        com.app.ironbank.service.LogMain       Hello from INFO             10-November-2020 Tuesday ICT 08:58:00                
+[WARN]        com.app.ironbank.service.LogMain       Hello from WARN             10-November-2020 Tuesday ICT 08:58:00                
+[ERROR]        com.app.ironbank.service.LogMain       Hello from ERROR             10-November-2020 Tuesday ICT 08:58:00                
+[FATAL]        com.app.ironbank.service.LogMain       Hello from FATAL             10-November-2020 Tuesday ICT 08:58:00                
+[INFO]        com.app.ironbank.service.Service       Hello from service with name = TEST             10-November-2020 Tuesday ICT 08:58:00                

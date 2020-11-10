@@ -3,7 +3,7 @@ package com.app.ironbank.dao;
 import com.app.ironbank.exception.BusinessException;
 import com.app.ironbank.model.Employee;
 
-public interface EmployeeDAO {
+public interface EmployeeDao {
 	
 	public int createEmployee(Employee employee)throws BusinessException;
 	public int updateEmployeeEmail(int empolyee_id, String newEmail)throws BusinessException;

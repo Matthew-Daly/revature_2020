@@ -1,97 +1,146 @@
 package com.app.ironbank.main;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import org.apache.log4j.Logger;
+
+import com.app.ironbank.dao.AccountDao;
+import com.app.ironbank.dao.CustomerDao;
+import com.app.ironbank.dao.TransactionDao;
+import com.app.ironbank.dao.impl.AccountDaoImpl;
+import com.app.ironbank.dao.impl.CustomerDaoImpl;
+import com.app.ironbank.dao.impl.TransactionDaoImpl;
+import com.app.ironbank.exception.BusinessException;
+import com.app.ironbank.model.Account;
+import com.app.ironbank.model.Customer;
+import com.app.ironbank.model.Transaction;
+import com.app.ironbank.service.LogMain;
+
 public class IronBankAppMain {
+	
+	// private static Logger log=Logger.getLogger(LogMain.class);
 
 	public static void main(String[] args) {
-	Scanner scanner=new Scanner(System.in);
-	System.out.println("Welcome to the Iron Bank, always glad to be of service.");
-	System.out.println("*******************************************************");
-	int choice=0;
-	do {
-		System.out.println("Iron Bank Menu");
-		System.out.println("***************");
-		System.out.println("First - Seak Employee by ID");
-		System.out.println("Second - Seak Employee by Name");
-		System.out.println("Third - Seak for Employee by Username");
-		System.out.println("Fourth - Seak Employee by Email");
-		System.out.println("Fifth - See all Employees");
-		System.out.println("Sixth - Exit");
-		System.out.println("Please chose your path (1-6)");
-		try{
-		choice=Integer.parseInt(scanner.nextLine());
-		}catch(NumberFormatException e) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Welcome to the IronBank, we are glad to be of service.");
+		System.out.println("******************************************************");
+		System.out.println("How many we help?");
+		int ch = 0;
+		do {
+			System.out.println("Iron Bamk MENU");
+			System.out.println("********************");
+			System.out.println("1 Create User Account");
+			System.out.println("2 Open An Account");
+			System.out.println("3 ");
+			System.out.println("4 ");
+			System.out.println("5 ");
+			System.out.println("6 ");
+			System.out.println("7 ");
+			System.out.println("8 ");
+			System.out.println("Please enter appropriate choice(1-8) :) ");
+			try {
+				ch = Integer.parseInt(scanner.nextLine());
+			} catch (NumberFormatException e) {
 
-		}
-		switch (choice){
-			case 1:System.out.println("Our deepest appologies, but this options is under construction.");
-
-
-			break;
-			case 2:System.out.println("Our deepest appologies, but this options is under construction.");
-
-			break;
-			case 3:System.out.println("Our deepest appologies, but this options is under construction.");
-
-			break;
-			case 4:System.out.println("Our deepest appologies, but this options is under construction.");
-
-			break;
-			case 5:System.out.println("Our deepest appologies, but this options is under construction.");
-
-			break;
-			case 6:System.out.println("Thank you for visting the Iron Bank.");
-
-			break;
-		default:System.out.println("Invalid choice, please choose beteween 1-6. Chose again.");
-			break;
-		}
-
-
+			}
+			switch (ch) {
+			case 1:
+				System.out.println("Please Enter your first name:");
+				String firstName = scanner.nextLine();
+				System.out.println("Please Enter your last name:");
+				String lastName = scanner.nextLine();
+				System.out.println("Please Enter a user name:");
+				String userName = scanner.nextLine();
+				System.out.println("Please Enter a password:");
+				String password = scanner.nextLine();
+				System.out.println("Please Enter a email address:");
+				String email = scanner.nextLine();
+			
+				Customer customer=new Customer(4, firstName, lastName ,userName, password, email);
+			
+				CustomerDao customerDao=new CustomerDaoImpl();
 		
-	}while(choice != 6);
+				try {
+					if(customerDao.createCustomer(customer)>0) {
+					System.out.println("Customer created in DB with below details");
+					System.out.println();
+				}
+				} catch (BusinessException e) {
+					System.out.println(e.getMessage());
+				}
+				break;
 
-    
-    }
- 
+			case 2:	
+				System.out.println("Please enter your customer id:");
+				int customer_id = Integer.parseInt(scanner.nextLine());
+				// System.out.println("Please Enter your pasword:");
+				// String password2= scanner.nextLine();
+
+				CustomerDao customerDao2=new CustomerDaoImpl();
+		
+				
+				try {
+					Customer customerFound=customerDao2.getCustomerByID(customer_id);
+					if(customerFound!=null) {
+						System.out.println("We Found "+ customerFound);
+					}
+				} catch (BusinessException e1) {
+					System.out.println(e1.getMessage());
+				}
+				
+
+			
+
+				break;
+			case 3:
+				System.out.println("Thank you for your interest. This option is still under CONSTRUCTION");
+
+				break;
+			case 4:
+				System.out.println("Thank you for your interest. This option is still under CONSTRUCTION");
+
+				break;
+			case 5:
+				System.out.println("Thank you for your interest. This option is still under CONSTRUCTION");
+
+				break;
+			case 6:
+				System.out.println("Thank you for your interest. This option is still under CONSTRUCTION");
+
+				break;
+			case 7:
+				// System.out.println("Fetching All The Players From the DB");
+				// try {
+				// 	List<Player> playersList=playerSearchService.getAllPlayers();
+				// 	if(playersList!=null && playersList.size()>0) {
+				// 		System.out.println("We Found "+playersList.size()+" no of player/s in the DB.. Details are");
+				// 		for(Player p:playersList) {
+				// 			System.out.println(p);
+				// 		}
+				// 	}
+				// } catch (BusinessException e) {
+				// 	System.out.println(e.getMessage());
+				// }
+
+				break;
+			case 8:
+				System.out.println("Thank you for using the IronBank. Have a pleasent day - but remmeber we will have our due.");
+
+				break;
+			default:
+				System.out.println("Invalid Choice!!!! Please enter choice between 1-8 only");
+				break;
+			}
+		} while (ch != 8);
+
+	}
+
 }
-		
-		
-		
-		
-//		Employee employee=new Employee(6, "Tycho", "Nestoris", "EnvoyStannis", "faceDeathFull", "tycho@ironbank.brv");
-		
-//		EmployeeDAO employeeDAO=new EmployeeDaoImpl();
-		
-//		try {
-//			if(employeeDAO.createEmployee(employee)>0) {
-//				System.out.println("Employee created in DB with the following details:");
-//				System.out.println(employee);
-//			}
-//		} catch (BusinessException e) {
-//			System.out.println(e.getMessage());
-//		}
-		
-//		try {
-//			int employee=employeeDAO.updateEmployeeEmail(6, "tycho2@ironbank.brv");
-//			if(employeeDAO.updateEmployeeEmail(6, "tycho2@ironbank.brv")>0){
-//				System.out.println("Email updated!");
-//			}
-//		} catch (BusinessException e) {
-//			System.out.println(e.getMessage());
-//		}
-		
-//		try {
-//			int employee_id=101; 
-//			Employee employee=employeeDAO.getEmployeeByID(103);
-//			if(employee != null) {
-//				System.out.println("Employee found with id " + employee_id + " info below:");
-//				System.out.println(employee);
-//			}
-//		} catch (BusinessException e) {
-//			System.out.println(e.getMessage());
-//		}
-//	}
-	
+
+
+
+
+
+
 
