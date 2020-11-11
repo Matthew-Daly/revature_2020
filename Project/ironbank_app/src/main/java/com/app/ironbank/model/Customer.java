@@ -20,6 +20,7 @@ public class Customer {
 	public void setCustomer_id(int customer_id) {
 		this.customer_id = customer_id;
 	}
+	
 	public String getFirstname() {
 		return firstname;
 	}
@@ -58,10 +59,9 @@ public class Customer {
 				+ ", username=" + username + ", password=" + password + ", email=" + email + "]";
 	}
 
-	public Customer(int customer_id, String firstname, String lastname, String username, String password,
+	public Customer(String firstname, String lastname, String username, String password,
 			String email) {
 		super();
-		this.customer_id = customer_id;
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.username = username;

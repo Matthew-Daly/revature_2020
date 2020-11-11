@@ -1,6 +1,6 @@
-package com.app.ironbank.dao.impl;
+	package com.app.ironbank.dao.impl;
 
-	
+import org.apache.log4j.Logger;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -13,6 +13,18 @@ import com.app.ironbank.model.Customer;
 
 public class CustomerDaoImpl implements CustomerDao {
 
+	// private static CustomerDaoImpl customerDao;
+	// final static Logger log = Logger.getLogger(CustomerDaoImpl.class);
+	
+	// private UserImplDao() {
+	// }
+	// public static UCustomerDaoImpl getCustmerDao(){
+	// 	if (customerDao == null){
+	// 		customerDao = new UserImplDao();
+	// 	}
+	// 	return customerDao;
+	
+	
 	@Override
 	public int createCustomer(Customer customer)throws BusinessException{
 		int c=0;

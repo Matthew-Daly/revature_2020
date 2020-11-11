@@ -1,3 +1,5 @@
+///am consolidating this customer and employee into user man not be used in final app
+
 package com.app.ironbank.dao;
 
 import com.app.ironbank.exception.BusinessException;

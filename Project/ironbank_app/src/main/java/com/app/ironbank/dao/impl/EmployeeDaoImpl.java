@@ -18,12 +18,11 @@ public class EmployeeDaoImpl implements EmployeeDao {
 		try(Connection connection=PostresSqlConnection.getConnection()){
 			String sql=EmployeeQueries.INSERTEMPLOYEE;
 		    PreparedStatement preparedStatement=connection.prepareStatement(sql);
-		    preparedStatement.setInt(1, employee.getEmployee_id());
-		    preparedStatement.setString(2, employee.getFirstname());
-		    preparedStatement.setString(3, employee.getLastname());
-		    preparedStatement.setString(4, employee.getUsername());
-		    preparedStatement.setString(5, employee.getPassword());
-		    preparedStatement.setString(6, employee.getEmail());
+		    preparedStatement.setString(1, employee.getFirstname());
+		    preparedStatement.setString(2, employee.getLastname());
+		    preparedStatement.setString(3, employee.getUsername());
+		    preparedStatement.setString(4, employee.getPassword());
+		    preparedStatement.setString(5, employee.getEmail());
 		    
 		    
 		    
